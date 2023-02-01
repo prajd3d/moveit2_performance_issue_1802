@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "ROS_DISTRO=${ROS_DISTRO}"
+source /opt/ros/$ROS_DISTRO/setup.bash
+if [ -f "/test_ws/install/setup.bash" ]; then
+echo "Sourcing ..."
+source /test_ws/install/setup.bash
+fi

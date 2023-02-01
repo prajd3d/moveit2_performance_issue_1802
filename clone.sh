@@ -10,12 +10,8 @@ git clone --single-branch --branch $ROS_DISTRO https://github.com/ros-planning/m
 if [ $ROS_DISTRO = "foxy" ]; then
     cp /work_dir/motion_planning_api_tutorial.cpp $SRC/moveit2_tutorials/doc/motion_planning_api/src/
     cp /work_dir/CMakeLists_foxy.txt $SRC/moveit2_tutorials/CMakeLists.txt
-    # only want the launch files not the other binaries
-    # cp /work_dir/CMakeLists_move_group_interface.txt $SRC/moveit2_tutorials/doc/move_group_interface/CMakeLists.txt
 else
     cp /work_dir/motion_planning_api_tutorial.cpp $SRC/moveit2_tutorials/doc/examples/motion_planning_api/src/
     cp /work_dir/CMakeLists_humble.txt $SRC/moveit2_tutorials/CMakeLists.txt
-    # only want the launch files not the other binaries
-    # cp /work_dir/CMakeLists_move_group_interface.txt $SRC/moveit2_tutorials/doc/examples/move_group_interface/CMakeLists.txt
 fi
 cd $ROOT && colcon build

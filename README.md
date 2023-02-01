@@ -2,6 +2,8 @@
 # Instructions
 The aim of this exercise is to show the difference in time-performance of motion planners in Foxy and Humble. In order to simplify the testing, I have used the `motion_planning_api_tutorial.cpp` as a base to perform the test. The test involves planning a configuration space path for the test robot from a starting configuration to a 6-DOF pose target. This test is repeated a 100 times to get the mean solve-time.
 
+In `motion_planning_api_tutorial.cpp`, I have removed references to `moveit_visual_tools` and added a timer at https://github.com/prajd3d/moveit2_performance_issue_1802/blob/040fc73df08451c7d27c08d4d6b65eb9d7702116/motion_planning_api_tutorial.cpp#L131.
+
 1. Pull fresh copies of the Foxy and Humble docker images.
     ```
     ./prep.sh

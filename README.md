@@ -12,15 +12,17 @@ In `motion_planning_api_tutorial.cpp`, I have removed references to `moveit_visu
 1. In Terminal Foxy,
     ```
     ./launch.sh foxy
-    /work_dir/clone.sh foxy
+    /work_dir/clone.sh
     . /work_dir/rossrc && ros2 launch moveit2_tutorials motion_planning_api_tutorial.launch.py
     ```
 1. In Terminal Humble,
     ```
     ./launch.sh humble
-    /work_dir/clone.sh humble
+    /work_dir/clone.sh
     . /work_dir/rossrc && ros2 launch moveit2_tutorials motion_planning_api_tutorial.launch.py
     ```
+1. When `clone.sh` is called, the relevant branch of the `moveit2_tutorials` is cloned. The test cpp file `motion_planning_api_tutorial.cpp` and the appropriate `CMakeLists.txt` file is copied over to `moveit2_tutorials` (effectively overwriting the existing files). In this way, both Foxy and Humble run the same code (but solve slower/faster).
+
 # Output
 
 ## My machine specifications
